@@ -1,18 +1,12 @@
 package Lab2
 
-class CircleNode(message:String) {
+import akka.actor.Actor
+
+class CircleNode(token:String) {
 
    var nextNode: CircleNode = null
-   var token: String = null
+    var hasNext:Boolean = false
+    var message: String = "ок"
 
-  def echo(nodeNumber:Int) ={
-    if (message == token){
-      println("Сообщение "+ message + " Узел "+ nodeNumber)
-    }
-    else {
-      println("Узел "+ nodeNumber +" недоступен")
-    }
-
-  }
 }
 
